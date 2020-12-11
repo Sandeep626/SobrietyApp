@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8113D4"
+    tools:context=".CheckActivity">
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="216dp"
+            android:layout_height="124dp"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="97dp"
+            android:layout_marginBottom="353dp"
+            android:backgroundTint="#673AB7"
+            android:text="Yes"
+            android:textColor="#EBE30D"
+            android:textSize="36sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="216dp"
+            android:layout_height="124dp"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="97dp"
+            android:layout_marginBottom="353dp"
+            android:backgroundTint="#673AB7"
+            android:text="Yes"
+            android:textColor="#EBE30D"
+            android:textSize="36sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="257dp"
+            android:layout_height="132dp"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="77dp"
+            android:text="Were You Sober Today?"
+            android:textAlignment="center"
+            android:textColor="#EBE30D"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnNo"
+            android:layout_width="216dp"
+            android:layout_height="124dp"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="97dp"
+            android:layout_marginBottom="235dp"
+            android:backgroundTint="#673AB7"
+            android:text="No"
+            android:textColor="#EBE30D"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button6"
+            app:layout_constraintVertical_bias="0.489" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
