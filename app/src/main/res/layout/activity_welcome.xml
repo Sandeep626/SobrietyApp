@@ -16,27 +16,32 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="324dp"
-            android:layout_height="138dp"
+            android:layout_width="338dp"
+            android:layout_height="92dp"
             android:layout_marginStart="52dp"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="35dp"
             android:layout_marginBottom="85dp"
-            android:text="Welcome To Amethyst Abstain"
+            android:padding="5dp"
+            android:shadowColor="#03FFF6"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="50"
+            android:text="Amethyst Abstain"
             android:textAlignment="center"
             android:textColor="#EBE30D"
             android:textSize="36sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.638" />
+            app:layout_constraintVertical_bias="0.621" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="633dp"
-            android:layout_height="228dp"
+            android:layout_width="417dp"
+            android:layout_height="268dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
@@ -45,12 +50,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.468"
             app:srcCompat="@drawable/sunimg" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="311dp"
-            android:layout_height="164dp"
+            android:layout_height="116dp"
             android:text="Sobriety Starts Here"
             android:textAlignment="center"
             android:textColor="#EBE30D"
@@ -59,7 +65,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.282" />
+            app:layout_constraintVertical_bias="0.294" />
 
         <Button
             android:id="@+id/btnSave"
