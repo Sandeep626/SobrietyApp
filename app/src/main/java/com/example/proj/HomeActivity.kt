@@ -50,7 +50,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         val listView2 = findViewById<ListView>(R.id.list_view2)
-        val list2 = arrayListOf("Happy");
+        val list2 = arrayListOf("Happy 55 days")
         val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1, list2)
 
         listView2.adapter = arrayAdapter
