@@ -29,7 +29,7 @@
             tools:ignore="HardcodedText" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/Quotes"
             android:layout_width="337dp"
             android:layout_height="348dp"
             android:background="#FFFFFF"

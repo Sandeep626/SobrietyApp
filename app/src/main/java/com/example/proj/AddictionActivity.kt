@@ -41,7 +41,7 @@ class AddictionActivity : AppCompatActivity() {
             Toast.makeText(this, "Item selected " + sharedPref.getString("Addiction$v", "default"), Toast.LENGTH_LONG).show()
         }
 
-        val button2 = findViewById<Button>(R.id.btn2)
+        val button2 = findViewById<Button>(R.id.btnNext)
         button2.setOnClickListener {
             val intent2 = Intent(this, AffectActivity::class.java)
 
