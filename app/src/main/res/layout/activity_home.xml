@@ -27,6 +27,7 @@
             android:id="@+id/btnadd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="200dp"
             android:background="#BB86FC"
             android:text="Add"
             android:textSize="18sp"
@@ -39,8 +40,8 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="0dp"
-            android:layout_height="52dp"
+            android:layout_width="411dp"
+            android:layout_height="225dp"
             android:text="Quote Of The Day:"
             android:textAlignment="center"
             android:textSize="40sp"
@@ -50,18 +51,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnadd"
             app:layout_constraintVertical_bias="0.974" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="29 Days"
-            android:textSize="40sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
