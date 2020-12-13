@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class HomeActivity : AppCompatActivity() {
+    //create shared pref file
     val sharedPrefFile = "kotlinsharedpreference"
 
     lateinit var toggle: ActionBarDrawerToggle
@@ -20,12 +21,17 @@ class HomeActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        //create object and editor
         val sharedPref = getSharedPreferences("sharedPrefFile", MODE_PRIVATE)
         val editor = sharedPref.edit()
+        //set app to existing user
         editor.putInt("New",1)
         editor.commit()
+        //count number of addictions
         var v = sharedPref.getInt("Count",0)
+        //list counter
         var aw = 0
+        //limit list to 6
         if(v > 6){
             editor.putInt("Count",0)
         }

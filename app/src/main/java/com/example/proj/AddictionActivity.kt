@@ -9,13 +9,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class AddictionActivity : AppCompatActivity() {
+    //create shared pref file
     val sharedPrefFile = "kotlinsharedpreference"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_addiction)
 
-
+        //create object and editor
         var sharedPref = getSharedPreferences("sharedPrefFile", MODE_PRIVATE)
         var editor = sharedPref.edit()
         var v = sharedPref.getInt("Count",0)
