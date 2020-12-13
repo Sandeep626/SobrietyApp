@@ -12,21 +12,6 @@
         android:layout_height="match_parent"
         android:background="#8113D4">
 
-        <TextView
-            android:id="@+id/recieve2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="117dp"
-            android:text="TextView"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/Quotes"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.89"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/list_view2" />
-
         <ListView
             android:id="@+id/list_view2"
             android:layout_width="wrap_content"
@@ -84,23 +69,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnReset"
             app:layout_constraintVertical_bias="0.974" />
-
-        <TextView
-            android:id="@+id/recieve"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="335dp"
-            android:layout_marginBottom="117dp"
-            android:text="TextView"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/Quotes"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/list_view2"
-            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
