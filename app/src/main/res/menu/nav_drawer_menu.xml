@@ -13,9 +13,9 @@
         android:id="@+id/miItem3"
         android:title="Quote of the Day"/>
 
-    <item
-        android:id="@+id/miItem4"
-        android:title="Settings"/>
+<!--    <item-->
+<!--        android:id="@+id/miItem4"-->
+<!--        android:title="Settings"/>-->
 
     <item
         android:id="@+id/miItem5"

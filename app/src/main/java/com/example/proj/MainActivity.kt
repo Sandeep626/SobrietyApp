@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
         }
         val intent3 = Intent(this,MotvActivity::class.java).apply {
         }
-        val intent4 = Intent(this,SettingsActivity::class.java).apply {
-        }
+//        val intent4 = Intent(this,SettingsActivity::class.java).apply {
+//        }
         val intent5 = Intent(this,SaveActivity::class.java).apply {
         }
         val intent6 = Intent(this,HelpActivity::class.java).apply {
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.miItem1 -> startActivity(intent1)
                 R.id.miItem2 -> Toast.makeText(applicationContext,"Already Here",Toast.LENGTH_SHORT).show()
                 R.id.miItem3 -> startActivity(intent3)
-                R.id.miItem4 -> startActivity(intent4)
+//                R.id.miItem4 -> startActivity(intent4)
                 R.id.miItem5 -> startActivity(intent5)
                 R.id.miItem6 -> startActivity(intent6)
             }
