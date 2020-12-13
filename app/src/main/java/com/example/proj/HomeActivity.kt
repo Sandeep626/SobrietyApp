@@ -60,7 +60,7 @@ class HomeActivity : AppCompatActivity() {
 
         val listView2 = findViewById<ListView>(R.id.list_view2)
         val list2 = arrayListOf(sharedPref.getString("Addiction0","Happy"))
-        list2.add(sharedPref.getString("Addiction$v","Happy"))
+        list2.add(sharedPref.getString("Addiction$v","asd"))
 
         val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1, list2)
 
