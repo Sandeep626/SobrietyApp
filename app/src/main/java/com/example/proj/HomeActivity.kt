@@ -20,6 +20,8 @@ class HomeActivity : AppCompatActivity() {
 
         val sharedPref = getSharedPreferences("sharedPrefFile", MODE_PRIVATE)
         val editor = sharedPref.edit()
+        editor.putInt("New",1)
+        editor.apply()
         var v = sharedPref.getInt("Count",0)
         var aw = 0
         if(v > 6){

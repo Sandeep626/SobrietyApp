@@ -20,7 +20,6 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".SaveActivity" />
         <activity android:name=".MotvActivity" />
-        <activity android:name=".SettingsActivity" />
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
