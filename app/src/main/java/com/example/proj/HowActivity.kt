@@ -1,7 +1,6 @@
 package com.example.proj
 
 import android.content.Intent
-import android.icu.text.SimpleDateFormat
 import android.icu.util.Calendar
 import android.os.Bundle
 import android.widget.Button
@@ -18,7 +17,6 @@ class HowActivity : AppCompatActivity() {
 
         val journalPref = getSharedPreferences("journalPrefFile", MODE_PRIVATE)
         val jrnlEditor = journalPref.edit()
-        val dateToday = SimpleDateFormat("yyyy/MM/dd").toString()
         var cal = Calendar.getInstance()
         val year = cal.get(Calendar.YEAR)
         val month = cal.get(Calendar.MONTH)

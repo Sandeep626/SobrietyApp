@@ -14,10 +14,12 @@
 
         <TextView
             android:id="@+id/textViewD"
-            android:layout_width="413dp"
+            android:layout_width="match_parent"
             android:layout_height="431dp"
             android:layout_marginTop="17dp"
             android:background="#FFFFFF"
+            android:textIsSelectable="false"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

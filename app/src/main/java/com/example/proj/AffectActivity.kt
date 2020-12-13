@@ -13,6 +13,9 @@ class AffectActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_affect)
 
+        var mless = 0F
+        var tless = 0F
+
         val affectPref = getSharedPreferences("affectfile", MODE_PRIVATE)
         val affecteditor = affectPref.edit()
         var a = affectPref.getInt("problems", 0)
@@ -22,8 +25,8 @@ class AffectActivity : AppCompatActivity() {
 
         val button3 = findViewById<Button>(R.id.btn3)
         button3.setOnClickListener {
-            var mless = n1.text.toString().toFloat()
-            var tless = n2.text.toString().toFloat()
+            mless = n1.text.toString().toFloat()
+            tless = n2.text.toString().toFloat()
 
             affecteditor.putFloat( "affectmoney$a", mless)
             affecteditor.putFloat( "affecttime$a", tless)
