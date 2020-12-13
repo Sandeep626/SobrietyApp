@@ -3,10 +3,7 @@ package com.example.proj
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.ListView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -29,6 +26,15 @@ class HomeActivity : AppCompatActivity() {
         if(v > 6){
             editor.putInt("Count",0)
         }
+
+
+        var rec = findViewById<TextView>(R.id.recieve)
+        var dt = intent.getStringExtra("Date")
+        rec.text = dt.toString()
+
+        var rec2= findViewById<TextView>(R.id.recieve2)
+        var st = intent.getStringExtra("Streak")
+        rec2.text = st.toString()
 
 
         val intent = Intent(this, AddictionActivity::class.java).apply {
@@ -73,7 +79,7 @@ class HomeActivity : AppCompatActivity() {
         val listView2 = findViewById<ListView>(R.id.list_view2)
         var list2 = arrayListOf(sharedPref.getString("Addiction0",""))
 
-        while (aw <= v){
+        while (aw < v){
             aw=aw.inc()
             list2.add(sharedPref.getString("Addiction$aw",""))
         }
@@ -83,6 +89,8 @@ class HomeActivity : AppCompatActivity() {
         button2.setOnClickListener {
             editor.clear()
             editor.putInt("Count",0)
+            v = 0
+            aw = 0
             editor.commit()
             arrayAdapter.clear()
         }
