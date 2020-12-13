@@ -20,10 +20,10 @@ class HomeActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-
         val sharedPref = getSharedPreferences("sharedPrefFile", MODE_PRIVATE)
         val editor = sharedPref.edit()
-        //editor.putInt("Count",0)
+        editor.putInt("New",1)
+        editor.commit()
         var v = sharedPref.getInt("Count",0)
         var aw = 0
         if(v > 6){

@@ -14,9 +14,7 @@ class AddictionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_addiction)
-        
-//        val sharedPreferences: SharedPreferences = this.getSharedPreferences(sharedPrefFile,
-//                Context.MODE_PRIVATE)
+
 
         var sharedPref = getSharedPreferences("sharedPrefFile", MODE_PRIVATE)
         var editor = sharedPref.edit()
