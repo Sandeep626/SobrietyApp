@@ -11,7 +11,7 @@
 
     <item
         android:id="@+id/miItem3"
-        android:title="Quote of the Day"/>
+        android:title="Past Journals"/>
 
 <!--    <item-->
 <!--        android:id="@+id/miItem4"-->

@@ -1,6 +1,8 @@
 package com.example.proj
 
+import android.app.DatePickerDialog
 import android.content.Intent
+import android.icu.util.Calendar
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -8,9 +10,10 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_motv.*
 import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter.ISO_DATE
 
 class MotvActivity : AppCompatActivity() {
+
+    val journalPrefFile = "kotlinsharedpreference"
 
     val currentDateTime = LocalDateTime.now()
     lateinit var toggle: ActionBarDrawerToggle
@@ -18,7 +21,14 @@ class MotvActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_motv)
-        eDate.setText(currentDateTime.format(ISO_DATE))
+
+        val journalPref = getSharedPreferences("journalPrefFile", MODE_PRIVATE)
+        val jrnlEditor = journalPref.edit()
+        var cal = Calendar.getInstance()
+        val year = cal.get(Calendar.YEAR)
+        val month = cal.get(Calendar.MONTH)
+        val day = cal.get(Calendar.DAY_OF_MONTH)
+        var datt = ""
 
         val intent1 = Intent(this,HomeActivity::class.java).apply {
         }
@@ -51,11 +61,26 @@ class MotvActivity : AppCompatActivity() {
             }
             true
         }
+
+        val dd = DatePickerDialog(
+            this,
+            DatePickerDialog.OnDateSetListener { DatePicker, year, month, dayOfMonth ->
+                datt = ("" + year + "/" + month + "/" + dayOfMonth)
+            },
+            year,
+            month,
+            day
+        )
+        dd.show()
+        journalPref.getString(datt,"")
     }
+
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(toggle.onOptionsItemSelected(item)){
             return true
         }
         return super.onOptionsItemSelected(item)
     }
+
 }

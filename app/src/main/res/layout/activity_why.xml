@@ -52,15 +52,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.831" />
 
-    <TextView
-        android:id="@+id/textView4"
+    <EditText
+        android:id="@+id/Journal2"
         android:layout_width="309dp"
         android:layout_height="333dp"
         android:layout_marginStart="57dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="45dp"
         android:background="#FFFFFF"
-        android:text="TextView"
+        android:gravity="top|left"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Quotes" />

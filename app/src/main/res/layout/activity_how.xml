@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.795" />
+        app:layout_constraintVertical_bias="0.784" />
 
     <TextView
         android:id="@+id/Quotes"
@@ -47,20 +47,20 @@
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.795" />
+        app:layout_constraintVertical_bias="0.784" />
 
-    <TextView
-        android:id="@+id/textView4"
+    <EditText
+        android:id="@+id/Journal1"
         android:layout_width="309dp"
         android:layout_height="333dp"
         android:layout_marginStart="57dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="45dp"
         android:background="#FFFFFF"
-        android:text="TextView"
+        android:gravity="top|left"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Quotes" />

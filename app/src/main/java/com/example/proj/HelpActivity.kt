@@ -19,7 +19,7 @@ class HelpActivity : AppCompatActivity() {
             startActivity(intent3)
         }
 
-        textView4.text="Canada\n" +
+        Journal1.setText("Canada\n" +
                 "Wellness Together Canada\n" +
                 "1-866-585-0445\n" +
                 "Canada\n" +
@@ -35,6 +35,6 @@ class HelpActivity : AppCompatActivity() {
                 "Call a distress centre in your area\n" +
                 "\n" +
                 "Suidice hotline1.833.456.4566\n" +
-                "Available 24/7/365"
+                "Available 24/7/365")
     }
 }
