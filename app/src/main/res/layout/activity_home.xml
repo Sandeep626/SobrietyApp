@@ -24,7 +24,22 @@
             app:layout_constraintVertical_bias="0.113" />
 
         <Button
-            android:id="@+id/btnadd"
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="200dp"
+            android:background="#BB86FC"
+            android:text="Reset"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.157"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.896" />
+
+        <Button
+            android:id="@+id/btnadd2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="200dp"
@@ -49,7 +64,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnadd"
+            app:layout_constraintTop_toBottomOf="@+id/btnReset"
             app:layout_constraintVertical_bias="0.974" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

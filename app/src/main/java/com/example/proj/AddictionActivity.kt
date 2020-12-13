@@ -18,8 +18,8 @@ class AddictionActivity : AppCompatActivity() {
 //        val sharedPreferences: SharedPreferences = this.getSharedPreferences(sharedPrefFile,
 //                Context.MODE_PRIVATE)
 
-        val sharedPref = getSharedPreferences("sharedPrefFile", MODE_PRIVATE)
-        val editor = sharedPref.edit()
+        var sharedPref = getSharedPreferences("sharedPrefFile", MODE_PRIVATE)
+        var editor = sharedPref.edit()
         var v = sharedPref.getInt("Count",0)
 
         val listView = findViewById<ListView>(R.id.list_view)
@@ -38,21 +38,15 @@ class AddictionActivity : AppCompatActivity() {
         listView.adapter = arrayAdapter
         listView.setOnItemClickListener { adapterView, view, i, l ->
 
-//            val editor:SharedPreferences.Editor = sharedPreferences.edit()
             editor.putString("Addiction$v", list[i])
-            editor.apply()
             editor.commit()
-            Toast.makeText(this, "Item selected " + sharedPref.getString("Addiction$v", "default") + "  as", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Item selected " + sharedPref.getString("Addiction$v", "default"), Toast.LENGTH_LONG).show()
         }
 
-        val button1 = findViewById<Button>(R.id.btn1)
-        button1.setOnClickListener {
-            val intent1 = Intent(this, HomeActivity::class.java)
-            startActivity(intent1)
-        }
         val button2 = findViewById<Button>(R.id.btn2)
         button2.setOnClickListener {
             val intent2 = Intent(this, AffectActivity::class.java)
+
             startActivity(intent2)
         }
     }

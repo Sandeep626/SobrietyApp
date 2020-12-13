@@ -17,6 +17,7 @@ class HomeActivity : AppCompatActivity() {
     lateinit var toggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
@@ -24,8 +25,11 @@ class HomeActivity : AppCompatActivity() {
         val editor = sharedPref.edit()
         //editor.putInt("Count",0)
         var v = sharedPref.getInt("Count",0)
-        //editor.apply()
-        //editor.commit()
+        var aw = 0
+        if(v > 6){
+            editor.putInt("Count",0)
+        }
+
 
         val intent = Intent(this, AddictionActivity::class.java).apply {
         }
@@ -46,6 +50,14 @@ class HomeActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        val button = findViewById<Button>(R.id.btnadd2)
+        button.setOnClickListener {
+            v =v.inc()
+            editor.putInt("Count",v)
+            editor.commit()
+            startActivity(intent)
+        }
+
         navView.setNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.miItem1 -> Toast.makeText(applicationContext, "Already Here", Toast.LENGTH_SHORT).show()
@@ -59,24 +71,29 @@ class HomeActivity : AppCompatActivity() {
         }
 
         val listView2 = findViewById<ListView>(R.id.list_view2)
-        val list2 = arrayListOf(sharedPref.getString("Addiction0","Happy"))
-        list2.add(sharedPref.getString("Addiction$v","asd"))
+        var list2 = arrayListOf(sharedPref.getString("Addiction0",""))
 
+        while (aw <= v){
+            aw=aw.inc()
+            list2.add(sharedPref.getString("Addiction$aw",""))
+        }
         val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1, list2)
+
+        val button2 = findViewById<Button>(R.id.btnReset)
+        button2.setOnClickListener {
+            editor.clear()
+            editor.putInt("Count",0)
+            editor.commit()
+            arrayAdapter.clear()
+        }
+
+
 
         listView2.adapter = arrayAdapter
         listView2.setOnItemClickListener { adapterView, view, i, l ->
             Toast.makeText(this, "Item selected " + list2[i], Toast.LENGTH_LONG).show()
         }
 
-        val button = findViewById<Button>(R.id.btnadd)
-        button.setOnClickListener {
-            v++
-            editor.putInt("Count",v)
-            editor.apply()
-            editor.commit()
-            startActivity(intent)
-        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -85,4 +102,8 @@ class HomeActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+}
+
+fun inc(){
+
 }

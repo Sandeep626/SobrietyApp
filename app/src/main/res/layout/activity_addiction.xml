@@ -23,25 +23,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="500dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="150dp"
-        android:background="#BB86FC"
-        android:text="Exit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt2" />
-
-    <Button
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="500dp"
         android:layout_marginEnd="38dp"
         android:layout_marginBottom="150dp"
@@ -49,7 +33,6 @@
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn1"
         app:layout_constraintTop_toBottomOf="@id/txt2" />
 
     <ListView
