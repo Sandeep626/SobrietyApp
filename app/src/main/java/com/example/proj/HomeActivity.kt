@@ -20,7 +20,6 @@ class HomeActivity : AppCompatActivity() {
 
         val sharedPref = getSharedPreferences("sharedPrefFile", MODE_PRIVATE)
         val editor = sharedPref.edit()
-        //editor.putInt("Count",0)
         var v = sharedPref.getInt("Count",0)
         var aw = 0
         if(v > 6){
@@ -61,6 +60,7 @@ class HomeActivity : AppCompatActivity() {
             v =v.inc()
             editor.putInt("Count",v)
             editor.commit()
+
             startActivity(intent)
         }
 
@@ -77,11 +77,14 @@ class HomeActivity : AppCompatActivity() {
         }
 
         val listView2 = findViewById<ListView>(R.id.list_view2)
-        var list2 = arrayListOf(sharedPref.getString("Addiction0",""))
+        var ss = sharedPref.getString("Addiction$aw","")+ " - "+sharedPref.getString("streak$aw","0")+ " Days"
+        var list2 = arrayListOf("ADDICTIONS")
+
 
         while (aw < v){
             aw=aw.inc()
-            list2.add(sharedPref.getString("Addiction$aw",""))
+            ss = sharedPref.getString("Addiction$aw","")+ " - "+sharedPref.getString("streak$aw","0")+ " Days"
+            list2.add(ss)
         }
         val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1, list2)
 
@@ -93,6 +96,7 @@ class HomeActivity : AppCompatActivity() {
             aw = 0
             editor.commit()
             arrayAdapter.clear()
+            list2.clear()
         }
 
 
@@ -110,8 +114,4 @@ class HomeActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-}
-
-fun inc(){
-
 }
