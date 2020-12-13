@@ -25,6 +25,38 @@
             app:layout_constraintVertical_bias="0.416"
             app:srcCompat="@drawable/quote" />
 
+        <Button
+            android:id="@+id/btnNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="159dp"
+            android:layout_marginTop="58dp"
+            android:layout_marginEnd="159dp"
+            android:layout_marginBottom="59dp"
+            android:text="New Date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewD" />
+
+        <EditText
+            android:id="@+id/dt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="33dp"
+            android:ems="10"
+            android:inputType="date"
+            android:gravity="center_horizontal|center_vertical"
+            app:layout_constraintBottom_toTopOf="@+id/textViewD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView

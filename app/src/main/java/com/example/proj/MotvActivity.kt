@@ -5,6 +5,7 @@ import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -28,7 +29,6 @@ class MotvActivity : AppCompatActivity() {
         val year = cal.get(Calendar.YEAR)
         val month = cal.get(Calendar.MONTH)
         val day = cal.get(Calendar.DAY_OF_MONTH)
-        var datt = ""
 
         val intent1 = Intent(this,HomeActivity::class.java).apply {
         }
@@ -65,14 +65,21 @@ class MotvActivity : AppCompatActivity() {
         val dd = DatePickerDialog(
             this,
             DatePickerDialog.OnDateSetListener { DatePicker, year, month, dayOfMonth ->
-                datt = ("" + year + "/" + month + "/" + dayOfMonth)
+                textViewD.text = journalPref.getString("$year/$month/$dayOfMonth","No Entry For This Date")
+                dt1.setText("$year/$month/$dayOfMonth")
             },
             year,
             month,
             day
         )
         dd.show()
-        journalPref.getString(datt,"")
+
+        val button = findViewById<Button>(R.id.btnNew)
+        button.setOnClickListener {
+            finish()
+            startActivity(intent)
+        }
+
     }
 
 
