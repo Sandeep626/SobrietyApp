@@ -3,13 +3,13 @@ package com.example.proj
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.*
+import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.ListView
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_home.view.*
 import kotlinx.android.synthetic.main.activity_main.*
-import java.time.LocalDate
-import java.time.temporal.ChronoUnit
 
 class HomeActivity : AppCompatActivity() {
     val sharedPrefFile = "kotlinsharedpreference"
@@ -21,21 +21,6 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        var rec = findViewById<TextView>(R.id.recieve)
-        var dt = intent.getStringExtra("Date")
-        rec.text = dt.toString()
-        var rec2= findViewById<TextView>(R.id.recieve2)
-        var st = intent.getStringExtra("Streak")
-        rec2.text = st.toString()
-
-        //val now = LocalDate.now()
-        //start is calender date
-        //val start = LocalDate.parse(date.toString())
-        //days is streak
-        //val days = ChronoUnit.DAYS.between(start,now)
-        //appends to listview
-        //streak.text = days.toString()
-
         val sharedPref = getSharedPreferences("sharedPrefFile", MODE_PRIVATE)
         val editor = sharedPref.edit()
         //editor.putInt("Count",0)
@@ -44,6 +29,7 @@ class HomeActivity : AppCompatActivity() {
         if(v > 6){
             editor.putInt("Count",0)
         }
+
 
         val intent = Intent(this, AddictionActivity::class.java).apply {
         }
@@ -85,12 +71,11 @@ class HomeActivity : AppCompatActivity() {
         }
 
         val listView2 = findViewById<ListView>(R.id.list_view2)
-        var list2 = arrayListOf(sharedPref.getString("Addiction0","") + " - " + st + " Day Streak")
+        var list2 = arrayListOf(sharedPref.getString("Addiction0",""))
 
         while (aw <= v){
             aw=aw.inc()
-            //.add(sharedPref.getString("Addiction$aw",""))
-            list2.add(sharedPref.getString("Addiction$aw","") + " - " + st + " Day Streak")
+            list2.add(sharedPref.getString("Addiction$aw",""))
         }
         val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1, list2)
 
@@ -101,6 +86,8 @@ class HomeActivity : AppCompatActivity() {
             editor.commit()
             arrayAdapter.clear()
         }
+
+
 
         listView2.adapter = arrayAdapter
         listView2.setOnItemClickListener { adapterView, view, i, l ->
@@ -115,4 +102,8 @@ class HomeActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+}
+
+fun inc(){
+
 }

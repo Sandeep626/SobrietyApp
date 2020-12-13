@@ -14,6 +14,9 @@ class AddictionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_addiction)
+        
+//        val sharedPreferences: SharedPreferences = this.getSharedPreferences(sharedPrefFile,
+//                Context.MODE_PRIVATE)
 
         var sharedPref = getSharedPreferences("sharedPrefFile", MODE_PRIVATE)
         var editor = sharedPref.edit()
@@ -29,18 +32,21 @@ class AddictionActivity : AppCompatActivity() {
                 "Eating",
                 "Porn"
         )
-        val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1, list)
+        val arrayAdapter: ArrayAdapter<String> =
+            ArrayAdapter(this, android.R.layout.simple_list_item_1, list)
 
         listView.adapter = arrayAdapter
         listView.setOnItemClickListener { adapterView, view, i, l ->
+
             editor.putString("Addiction$v", list[i])
             editor.commit()
             Toast.makeText(this, "Item selected " + sharedPref.getString("Addiction$v", "default"), Toast.LENGTH_LONG).show()
         }
 
-        val button2 = findViewById<Button>(R.id.btnNext)
+        val button2 = findViewById<Button>(R.id.btn2)
         button2.setOnClickListener {
             val intent2 = Intent(this, AffectActivity::class.java)
+
             startActivity(intent2)
         }
     }
