@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 class HomeActivity : AppCompatActivity() {
 
-    val sharedPreferences shared
+
 
     lateinit var toggle: ActionBarDrawerToggle
 
