@@ -53,7 +53,7 @@
         app:layout_constraintVertical_bias="0.784" />
 
     <EditText
-        android:id="@+id/Journal1"
+        android:id="@+id/Journal3"
         android:layout_width="309dp"
         android:layout_height="333dp"
         android:layout_marginStart="57dp"

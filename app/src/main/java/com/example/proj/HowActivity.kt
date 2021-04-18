@@ -33,7 +33,7 @@ class HowActivity : AppCompatActivity() {
         val button0 = findViewById<Button>(R.id.btnSav)
         button0.setOnClickListener {
             val intent3 = Intent(this, HomeActivity::class.java)
-            jrnlEditor.putString("$dd", Journal1.text.toString())
+            jrnlEditor.putString("$dd", Journal3.text.toString())
             jrnlEditor.apply()
             startActivity(intent3)
         }

@@ -4,8 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_how.*
 
 class HelpActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
@@ -19,7 +19,9 @@ class HelpActivity : AppCompatActivity() {
             startActivity(intent3)
         }
 
-        Journal1.setText("Canada\n" +
+        val j3 = findViewById<TextView>(R.id.Journal3)
+
+        j3.text = ("Canada\n" +
                 "Wellness Together Canada\n" +
                 "1-866-585-0445\n" +
                 "Canada\n" +
